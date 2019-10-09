@@ -59,7 +59,7 @@ class ExampleJob
       _resetEvents["th" + ( (ID + 1) % _threadNumber ).ToString()].Set();
 
       // set current thread to wait
-      // when release is true, we let the thread finish
+      // but when release is true, we let the thread finish
       if (!release)
         _resetEvents["th" + ID.ToString()].WaitOne();
     }
